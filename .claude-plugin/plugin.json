@@ -1,0 +1,14 @@
+{
+  "name": "unbox-skills",
+  "version": "1.0.0",
+  "description": "Researcher deep profiling toolkit — personality analysis, cross-reference, and knowledge graph construction",
+  "author": {
+    "name": "freemty",
+    "url": "https://github.com/freemty"
+  },
+  "homepage": "https://github.com/freemty/unbox-skills",
+  "repository": "https://github.com/freemty/unbox-skills",
+  "license": "MIT",
+  "keywords": ["research", "profiling", "knowledge-graph", "unbox", "claude-code"],
+  "skills": ["./"]
+}
