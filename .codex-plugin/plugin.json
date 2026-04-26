@@ -1,0 +1,29 @@
+{
+  "name": "unbox-skills",
+  "version": "1.0.0",
+  "description": "Researcher deep profiling toolkit for personality, career lineage, mentorship, and knowledge graph construction.",
+  "author": {
+    "name": "freemty",
+    "url": "https://github.com/freemty"
+  },
+  "homepage": "https://github.com/freemty/unbox-skills",
+  "repository": "https://github.com/freemty/unbox-skills",
+  "license": "MIT",
+  "keywords": ["research", "profiling", "knowledge-graph", "unbox", "codex", "skills"],
+  "skills": "./",
+  "interface": {
+    "displayName": "Unbox Skills",
+    "shortDescription": "Deep researcher profiling and knowledge graph construction.",
+    "longDescription": "Unbox Skills supports researcher profiling from papers, web traces, biographies, mentorship lineage, and direction evolution, with optional graph and wiki outputs.",
+    "developerName": "freemty",
+    "category": "Research",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://github.com/freemty/unbox-skills",
+    "defaultPrompt": [
+      "Unbox this researcher's background.",
+      "Build a researcher knowledge graph.",
+      "Compile these profiles into a wiki."
+    ],
+    "brandColor": "#7C3AED"
+  }
+}
