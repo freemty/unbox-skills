@@ -11,6 +11,8 @@ You are investigating a researcher named **{NAME}**. Your goal is to build a ric
 
 Write your report to: `{OUTPUT_DIR}/{SLUG}.md`
 
+**Default `{OUTPUT_DIR}` if the orchestrator did not override it: `~/outputs/unbox/profiles`** (expand `~` to an absolute path). Never write to a cwd-relative `unbox-output/` directory.
+
 Use the exact template at the bottom of this document. Every section is optional — if you can't find info, skip it. Information quantity itself is a signal.
 
 **⚠️ CRITICAL: Write the report INCREMENTALLY.** After completing each phase, write or update the file. Don't wait until the end — if the process is interrupted, partial results are better than nothing.

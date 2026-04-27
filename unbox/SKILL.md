@@ -61,10 +61,15 @@ For paper links: after extracting authors, display the list and ask user to conf
 ### Step 2: Create Output Directory
 
 ```bash
-mkdir -p unbox-output
+mkdir -p ~/outputs/unbox/profiles ~/outputs/unbox/overviews
 ```
 
-Use `unbox-output/` in the current working directory. If it already exists, that's fine — files will be overwritten.
+**Canonical output paths (see `docs/outputs-convention.md`):**
+- Individual profiles: `~/outputs/unbox/profiles/{slug}.md`
+- Overview files: `~/outputs/unbox/overviews/_overview.md` (or batch-specific name)
+- Backfill deltas: `~/outputs/unbox/profiles/_backfill_{slug}.md`
+
+Never write to cwd-relative `unbox-output/` — always use absolute `~/outputs/unbox/`.
 
 ### Step 3: Dispatch Subagents
 
@@ -72,7 +77,7 @@ For each researcher name, spawn one subagent using the Agent tool:
 
 - **All subagents launch in parallel** (single message with multiple Agent tool calls)
 - Each subagent receives the full prompt from `references/subagent-prompt.md` with `{NAME}` replaced
-- Each subagent writes its report to `unbox-output/{slug}.md`
+- Each subagent writes its report to `~/outputs/unbox/profiles/{slug}.md`
 - Slug: lowercase name, spaces replaced with `-`, remove non-ascii (e.g., "Alice Zhang" → `alice-zhang`)
 
 Example Agent call:
@@ -86,7 +91,7 @@ Agent({
 
 ### Step 4: Assemble Overview
 
-After all subagents complete, read all generated reports and create `unbox-output/_overview.md`:
+After all subagents complete, read all generated reports and create `~/outputs/unbox/overviews/_overview.md`:
 
 ```markdown
 # Unbox Report
@@ -104,7 +109,7 @@ The "一句话" for each person is extracted from the `## 一句话` section of 
 
 ### Step 5: Report to User
 
-Print the overview table and the path to `unbox-output/`.
+Print the overview table and the path to `~/outputs/unbox/profiles/`.
 
 ---
 

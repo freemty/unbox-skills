@@ -32,6 +32,8 @@ Read it first to understand what's already been covered. Do NOT duplicate existi
 
 Write your findings to: `{OUTPUT_DIR}/_backfill_{SLUG}.md`
 
+**Default `{OUTPUT_DIR}` if the orchestrator did not override it: `~/outputs/unbox/profiles`** (expand `~` to an absolute path). Never write to a cwd-relative `unbox-output/`.
+
 Use the structured format below. Only include sections where you found new information.
 
 **Write incrementally** — after each search block, update the output file.
